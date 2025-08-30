@@ -128,14 +128,18 @@ import LatestBlog from './components/LatestBlog.vue'
 /* 标题与小字 */
 h1 {
   margin: 0.5rem 0 0.5rem 0;
-  font-size: 2.2rem; /* ✅ 放大标题 */
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
   line-height: 1.25;
   font-weight: 700;
 }
 
+h2 {
+  font-size: 1.6rem;
+}
+
 .small {
   margin: 0.5rem 0 0.5rem 0;
-  font-size: 1.3rem; /* ✅ 略微放大副标题 */
+  font-size: clamp(1.1rem, 4vw * 1.3 / 2.2, 1.3rem);
   color: #6b7280;
 }
 
@@ -150,8 +154,8 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 45px; /* ✅ 放大按钮 */
-  height: 45px;
+  width: clamp(2.4rem, 4vw * 2.8 / 2.2, 2.8rem);
+  height: clamp(2.4rem, 4vw * 2.8 / 2.2, 2.8rem);
   border-radius: 25%;
   background: rgba(255, 255, 255, 0.7);
   color: #333;
@@ -166,8 +170,8 @@ h1 {
 }
 
 .icon {
-  width: 25px; /* ✅ 放大图标 */
-  height: 25px;
+  width: clamp(1.3rem, 4vw / 2.2 * 1.6, 1.6rem);
+  height: clamp(1.3rem, 4vw / 2.2 * 1.6, 1.6rem);
   display: inline-block;
   background-size: cover;
 }
@@ -193,18 +197,6 @@ h1 {
 }
 
 /* ========= 响应式 ========= */
-
-/* 中等屏幕 */
-@media (max-width: 920px) {
-  .hero {
-    padding: 2.2rem 0;
-    gap: 2rem;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-}
 
 /* 小屏幕 */
 @media (max-width: 680px) {
@@ -232,6 +224,10 @@ h1 {
 
   h1 {
     font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
   }
 
   .small {

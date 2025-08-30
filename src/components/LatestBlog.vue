@@ -136,7 +136,7 @@ onMounted(async () => {
   margin: 0;
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .post {
@@ -216,7 +216,7 @@ onMounted(async () => {
   color: var(--accent);
   text-decoration: none;
   font-weight: 600;
-  align-self: flex-start;
+  align-self: flex-end;
   padding: 7px 12px;
   border-radius: 10px;
   background: linear-gradient(
@@ -268,7 +268,7 @@ onMounted(async () => {
 .skeleton-list {
   display: grid;
   gap: 1.15rem;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .skeleton {
@@ -311,10 +311,9 @@ onMounted(async () => {
   }
 }
 
-/* 中等屏幕（<=920px） */
-@media (max-width: 920px) {
+@media (max-width: 800px) {
   .post-list {
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(1, 1fr);
     gap: 1.3rem;
   }
 
@@ -338,6 +337,7 @@ onMounted(async () => {
     font-size: 0.88rem;
     padding: 6px 10px;
     border-radius: 9px;
+    align-self: flex-end;
   }
 }
 
