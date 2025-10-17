@@ -119,7 +119,7 @@ onMounted(async () => {
   --bg: rgba(255, 255, 255, 0.5);
   --muted: #6b7280;
   --excerpt: #5f6c85; /* 比原先暖一点的灰蓝 */
-  --accent: #4f46e5; /* 柔和蓝紫色，取自 indigo-600 */
+  --accent: #0891b2; /* 柔和蓝紫色，取自 indigo-600 */
   --card-shadow: 0 10px 26px rgba(15, 23, 42, 0.06);
   --card-border: rgba(12, 17, 24, 0.04);
 
@@ -220,8 +220,8 @@ onMounted(async () => {
   border-radius: 10px;
   background: linear-gradient(
       180deg,
-      rgba(79, 70, 229, 0.06),
-      rgba(79, 70, 229, 0.02)
+      rgba(8, 145, 178, 0.08),
+      rgba(8, 145, 178, 0.03)
   );
   transition: background .12s ease, transform .12s ease, box-shadow .12s ease;
 }
@@ -230,8 +230,8 @@ onMounted(async () => {
   transform: translateY(-2px);
   background: linear-gradient(
       180deg,
-      rgba(67, 56, 202, 0.12),
-      rgba(67, 56, 202, 0.04)
+      rgba(7, 89, 133, 0.15),
+      rgba(7, 89, 133, 0.05)
   );
 }
 
@@ -265,17 +265,26 @@ onMounted(async () => {
 
 /* skeleton */
 .skeleton-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: grid;
-  gap: 1.15rem;
+  gap: 1.5rem;
   grid-template-columns: repeat(2, 1fr);
 }
 
+
 .skeleton {
-  padding: 1rem;
-  border-radius: 12px;
+  padding: 1.25rem;
+  border-radius: 14px;
   background: linear-gradient(180deg, #fbfbfb, #fff);
   box-shadow: var(--card-shadow);
   border: 1px solid var(--card-border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  transition: transform .12s cubic-bezier(.2, .9, .3, 1), box-shadow .12s ease;
+  min-height: 180px;
 }
 
 .s-line {
@@ -338,6 +347,9 @@ onMounted(async () => {
     border-radius: 9px;
     align-self: flex-end;
   }
+
+  .skeleton-list { grid-template-columns: repeat(1, 1fr); gap: 1.3rem; }
+  .skeleton { padding: 1rem; min-height: 150px; }
 }
 
 /* 小屏幕（<=680px） */
@@ -375,5 +387,10 @@ onMounted(async () => {
     font-size: 0.88rem;
     padding: 1rem 0.5rem;
   }
+
+  .skeleton-list { grid-template-columns: 1fr; gap: 1.1rem; }
+  .skeleton { padding: 0.85rem; min-height: 130px; gap: 0.45rem; }
+  .s-line.title { height: 16px; }
+  .s-line.excerpt { height: calc(1.35rem * 3); }
 }
 </style>

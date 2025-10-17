@@ -29,7 +29,7 @@
             </a>
             <a
                 aria-label="Blog"
-                href="https://blog.sugarmgp.icu/"
+                href="https://blog.sugarmgp.cn/"
                 target="_blank"
             >
               <i class="icon blog"></i>
@@ -40,7 +40,7 @@
 
       <section id="blog">
         <h2>最新博客</h2>
-        <latest-blog rss-url="https://blog.sugarmgp.icu/rss2.xml"/>
+        <latest-blog rss-url="https://blog.sugarmgp.cn/rss2.xml"/>
       </section>
     </main>
 
