@@ -45,12 +45,13 @@
     </main>
 
     <footer class="footer">
-      © {{ new Date().getFullYear() }} · SugarMGP
+      © {{ new Date().getFullYear() }} · SugarMGP |
+      <a href="https://beian.miit.gov.cn/" target="_blank">浙ICP备2025196958号</a>
     </footer>
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import LatestBlog from './components/LatestBlog.vue'
 </script>
 
@@ -194,6 +195,14 @@ h2 {
   text-align: center;
   color: #6b7280;
   font-size: 0.8rem;
+}
+
+.footer > a {
+  margin-top: 1.55rem;
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.8rem;
+  text-decoration: none;
 }
 
 /* ========= 响应式 ========= */

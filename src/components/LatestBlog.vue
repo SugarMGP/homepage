@@ -120,7 +120,6 @@ onMounted(async () => {
   --muted: #6b7280;
   --excerpt: #5f6c85; /* 比原先暖一点的灰蓝 */
   --accent: #4f46e5; /* 柔和蓝紫色，取自 indigo-600 */
-  --accent-hover: #4338ca; /* 深一点 hover 态 */
   --card-shadow: 0 10px 26px rgba(15, 23, 42, 0.06);
   --card-border: rgba(12, 17, 24, 0.04);
 
